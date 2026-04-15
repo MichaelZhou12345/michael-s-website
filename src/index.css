@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand: #3b82f6; /* Vibrant Blue */
+  --color-accent: #60a5fa; /* Lighter Blue */
+  --color-bg: #0f172a; /* Deep Navy Blue */
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-white antialiased selection:bg-blue-500/30;
+    scroll-behavior: smooth;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-white to-blue-400;
+}
+
+.section-padding {
+  @apply py-24 px-6;
+}
+
+.container-max {
+  @apply max-w-6xl mx-auto;
+}
+
+.tag {
+  @apply px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 text-xs font-medium border border-blue-500/20;
+}
+
+.card-hover {
+  @apply transition-all duration-500 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-500/20 hover:border-blue-500/50;
+}
+
+.grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
+  background-size: 40px 40px;
+}
